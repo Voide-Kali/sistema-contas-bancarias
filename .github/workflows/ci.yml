@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Check formatting
+        run: git diff --check
+      - name: Validate scripts
+        run: |
+          node --check Conta.js
+          node --check ContaCorrente.js
+          node --check ContaPoupanca.js
+          node --check ContaSalario.js
+          node --check index.js

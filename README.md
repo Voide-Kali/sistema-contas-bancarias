@@ -34,3 +34,9 @@ O foco é praticar:
 - herança;
 - polimorfismo;
 - reutilização de código.
+
+## Governança
+
+- [LICENSE](LICENSE)
+- [CONTRIBUTING.md](CONTRIBUTING.md)
+- [CHANGELOG.md](CHANGELOG.md)
